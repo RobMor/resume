@@ -61,20 +61,20 @@
 
 % \printaddress is used to style an address line (given as input)
 \def \printinfo #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
+    \begingroup
+        \def \\ {\addressSep\ }
+        \centerline{#1}
+    \endgroup
+    \par
+    \addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
-  \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
-  \endgroup
+    \begingroup
+        \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+        \nameskip\break
+    \endgroup
 }
 
 %----------------------------------------------------------------------------------------
@@ -83,10 +83,10 @@
 
 \let\ori@document=\document
 \renewcommand{\document}{
-  \ori@document  % Begin document
-  \printname % Print the name specified with \name
-  \@ifundefined{@infoone}{nah}{\printinfo{\@infoone}}
-  \@ifundefined{@infotwo}{nah}{\printinfo{\@infotwo}}
+    \ori@document  % Begin document
+    \printname % Print the name specified with \name
+    \@ifundefined{@infoone}{nah}{\printinfo{\@infoone}}
+    \@ifundefined{@infotwo}{nah}{\printinfo{\@infotwo}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -95,14 +95,14 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-	\sectionskip
-	\MakeUppercase{\bf #1} % Section title
-	\sectionlineskip
-	\hrule % Horizontal line
-	\begin{list}{}{\leftmargin=1em}
-		\item[]
+    \sectionskip
+    \MakeUppercase{\bf #1} % Section title
+    \sectionlineskip
+    \hrule % Horizontal line
+    \begin{list}{}{\leftmargin=1em}
+    \item[]
 }{
-	\end{list}
+    \end{list}
 }
 
 %----------------------------------------------------------------------------------------
@@ -110,14 +110,14 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-	{\bf #1} \hfill {#2} % Bold company name and date on the right
-	\ifthenelse{\equal{#3}{}}{}{\\ {\em #3} \hfill {\em #4}} % Italic job title and location
-	\smallskip
-	\begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
-		\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+    {\bf #1} \hfill {#2} % Bold company name and date on the right
+    \ifthenelse{\equal{#3}{}}{}{\\ {\em #3} \hfill {\em #4}} % Italic job title and location
+    \smallskip
+    \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
+        \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
 }{
-	\end{list}
-	\vspace{0.5em} % Some space after the list of bullet points
+    \end{list}
+    \vspace{0.5em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
@@ -125,13 +125,13 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rColumnSubsection}[6]{ % 6 input arguments - school, grad date, major, GPA, list title, num cols
-	{\bf #1} \hfill {#2} % Bold school name and graduation date on the right
-	\ifthenelse{\equal{#3}{}}{\\}{\\ {\em #3} \hfill {\em #4}} % Italic major and GPA on the right
-	\setlength{\multicolsep}{0em} % Set the space after the list title
-	\begin{multicols}{#6}[#5] % Number of columns and header
-		\begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
-			\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+    {\bf #1} \hfill {#2} % Bold school name and graduation date on the right
+    \ifthenelse{\equal{#3}{}}{\\}{\\ {\em #3} \hfill {\em #4}} % Italic major and GPA on the right
+    \setlength{\multicolsep}{0em} % Set the space after the list title
+    \begin{multicols}{#6}[#5] % Number of columns and header
+        \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
+            \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
 }{
-		\end{list}
-	\end{multicols}
+        \end{list}
+    \end{multicols}
 }
