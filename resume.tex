@@ -22,11 +22,13 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.4in,top=0.3in,right=0.4in,bottom=0.3in]{geometry} % Document margins
+
+\usepackage{multicol} % Fancy multi-column stuff
 
 \name{Robert Morrison} % Your name
-\address{robbieguy98@gmail.com \\ (240) 780-1059} % Your address
-\address{LinkedIn: robmorr \\ GitHub: robmor} % Your phone number and email
+\info{robbieguy98@gmail.com \\ (240) 780-1059} % Your address
+\info{\texttt{robmor.github.io} \\ \texttt{linkedin.com/in/robmorr} \\ \texttt{github.com/robmor}} % Your phone number and email
 
 \begin{document}
 
@@ -36,9 +38,18 @@
 
 \begin{rSection}{Education}
 
-{\bf University of Maryland, College Park} \hfill {\em May 2020} \\ 
-B.S. in Computer Science \& Statistics \smallskip \\
-Overall GPA: 3.5
+\begin{rColumnSubsection}{University of Maryland, College Park}{May 2020}
+{B.S. in Computer Science \& Statistics}{GPA 3.5}
+{Relevant Coursework:}{4}
+\item Machine Learning
+\item Probability Theory
+\item Software Engineering
+\item Data Science
+\item Algorithm Design
+\item Comp. Methods
+\item Database Design
+\item Artificial Intelligence
+\end{rColumnSubsection}
 
 \end{rSection}
 
@@ -48,33 +59,42 @@ Overall GPA: 3.5
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{ACME, Inc}{October 2010 - Present}{Web Developer}{Palo Alto, CA}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-\item Donec et mollis dolor. Praesent et diam eget libero Adobe Coldfusion egestas mattis sit amet vitae augue.
-\item Nam tincidunt congue enim, ut porta lorem Microsoft SQL lacinia consectetur.
-\item Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-\item Pellentesque auctor nisi id magna consequat JavaScript sagittis.
-\item Aliquam at massa ipsum. Quisque bash bibendum purus convallis nulla ultrices ultricies.
+%------------------------------------------------
+
+\begin{rSubsection}{Lockheed Martin}{Jun 2019 - Aug 2019}{Software Engineering Intern}{Rochester, NY}
+\item Re-designed, built and tested a data analysis tool in Python used by data scientists and engineers every day
+\item Overhauled the documentation and fielded maintenance and feature requests for the tool
+\item Built an internal package management system to boost daily productivity for data scientists, engineers and developers
+\item Developed statistical models around faults in data transfer systems to assist struggling sectors
+\item Constructed a proof of concept Kafka cluster visualization tool as a side project
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{AJAX Hosting}{December 2009 - October 2010}{Lead Developer}{Austin, TX}
-\item Aenean ut gravida lorem. Ut turpis felis, Perl pulvinar a semper sed, adipiscing id dolor.
-\item Curabitur dapibus enim sit amet elit pharetra tincidunt website feugiat nisl imperdiet. Ut convallis AJAX libero in urna ultrices accumsan.
-\item Cum sociis natoque penatibus et magnis dis MySQL parturient montes, nascetur ridiculus mus.
-\item In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-\item Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper.
+\begin{rSubsection}{University of Maryland}{Jan 2017 - Present}{Undergraduate Researcher}{College Park, MD}
+\item Received the competitive Maryland Summer Scholars grant which is given to less than 30 undergraduates each summer
+\item Researched and implemented new data oriented vulnerability detection processes for use in the context of software development
+\item Wrote a full technical report describing experimental design and results along with a poster presenting those findings
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{TinySoft}{January 2008 - April 2010}{Web Designer \& Developer}{Gainesville, GA}
-\item Vivamus PostgreSQL fermentum semper porta. Nunc diam velit PHP, adipiscing ut tristique vitae
-\item Maecenas convallis ullamcorper ultricies stylesheets.
-\item Quisque mi metus, unit tests CSS ornare sit amet fermentum et, tincidunt et orci.
-\item Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id
+\begin{rSubsection}{National Institute of Standards and Technology}{Jun 2018 - Aug 2018}{Scientific Programmer}{Gaithersburg, MD}
+\item Developed a web scraping tool to harvest solar panel output and power grid usage from utility websites (Developed into the netzero project)
+\item Pioneered the overhaul of a 10 year old flame speed analysis program written in C++ to update it to modern code standards and make it more maintainable in the future while increasing the speed of calculations
+\item Worked with researchers directly to develop tests for the programs and make sure the new methods weren't negatively affecting the accuracy of the results
+\item Documented the resulting code thoroughly to ensure the future health of the program
 \end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Projects}{}{}{}
+\item NetZero -- An extensible tool to collect, manage, and analyze several data sources. Meant to be used when analyzing the efficiency of a house.
+\item Trigger Happy -- A computer vision enabled smart nerf gun that prevents what would be lethal shots. Won HackPSU.
+\item LookOwtBot -- A facebook messenger bot that supplies students with timely reminders for their assignments.
+\end{rSubsection}
+
+%------------------------------------------------
 
 \end{rSection}
 
@@ -85,25 +105,12 @@ Overall GPA: 3.5
 \begin{rSection}{Technical Strengths}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & Prolog, Haskell, AWK, Erlang, Scheme, ML \\
-Protocols \& APIs & XML, JSON, SOAP, REST \\
-Databases & MySQL, PostgreSQL, Microsoft SQL \\
-Tools & SVN, Vim, Emacs
+Programming Languages & Python, C++, C, Java, Haskell, Rust, OCaml, SQL \\
+Tools & Git, Linux, Windows, Research Processes, Agile Methodologies \\
+Other & AutoCAD, \LaTeX, MatLab, Microsoft Office
 \end{tabular}
 
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
 
