@@ -22,6 +22,9 @@
 
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
+% Set the font to Tex Gyre Pagella
+\usepackage{tgpagella}
+
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
