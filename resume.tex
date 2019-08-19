@@ -26,6 +26,19 @@
 
 \usepackage{multicol} % Fancy multi-column stuff
 
+\newenvironment{hanging}{
+    \list{}{
+        \itemindent=-1em
+        \leftmargin=1em
+        \topsep=0pt
+        \partopsep=0pt
+    }
+    \item\relax
+}{
+    \endlist
+}
+  
+
 \name{Robert Morrison} % Your name
 \info{robbieguy98@gmail.com \\ (240) 780-1059} % Your address
 \info{\href{https://robmor.dev}{robmor.dev} \\ \href{https://linkedin.com/in/robmorr}{linkedin.com/in/robmorr} \\ \href{https://github.com/robmor}{github.com/robmor}} % Your phone number and email
@@ -38,18 +51,27 @@
 
 \begin{rSection}{Education}
 
-\begin{rColumnSubsection}{University of Maryland, College Park}{May 2020}
-{B.S. in Computer Science \& Statistics}{GPA 3.6}
-{Relevant Coursework:}{4}
-\item Machine Learning
-\item Probability Theory
-\item Software Engineering
-\item Data Science
-\item Algorithm Design
-\item Comp. Methods
-\item Database Design
-\item Artificial Intelligence
-\end{rColumnSubsection}
+{\bf University of Maryland, College Park} \hfill {May 2020} \\
+{\em B.S. in Computer Science \& Statistics} \hfill {\em GPA 3.6}
+
+\begin{hanging}
+Recognition: {Brian G. Lyons Computer Science Endowed Scholarship (2019)}, {RSA Conference Security Scholars (2019)}, {Maryland Summer Scholars Grant (2018)}
+\end{hanging}
+
+\setlength{\multicolsep}{0em} % Set the space after the list title
+\begin{multicols}{4}[Relevant Coursework:] % Number of columns and header
+    \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
+    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+	\item Machine Learning
+	\item Probability Theory
+	\item Software Engineering
+	\item Data Science
+	\item Algorithm Design
+	\item Comp. Methods
+	\item Database Design
+	\item Artificial Intelligence
+    \end{list}
+\end{multicols}
 
 \end{rSection}
 
@@ -62,19 +84,11 @@
 %------------------------------------------------
 
 \begin{rSubsection}{Lockheed Martin}{Jun 2019 - Aug 2019}{Software Engineering Intern}{Rochester, NY}
-\item Re-designed, built and tested a data analysis tool in Python used by data scientists and engineers every day
+\item Re-designed, built and tested a flight data analysis tool in Python used by data scientists and engineers every day
 \item Overhauled the documentation and fielded maintenance and feature requests for the tool
 \item Built an internal package management system to boost daily productivity for data scientists, engineers and developers
 \item Integrated the package management system directly with continuous integration and deployment software
 \item Constructed a proof of concept Kafka cluster visualization tool as a side project
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{University of Maryland}{Jan 2017 - Present}{Undergraduate Researcher}{College Park, MD}
-\item Received the competitive Maryland Summer Scholars grant which is given to less than 30 undergraduates each summer
-\item Researched and implemented new data oriented vulnerability detection processes for use in the context of software development using Sci-Kit Learn
-\item Wrote a full technical report describing experimental design and results along with a poster presenting those findings
 \end{rSubsection}
 
 %------------------------------------------------
@@ -84,6 +98,23 @@
 \item Pioneered the overhaul of a 10 year old flame speed analysis program written in C++ to update it to modern code standards and make it more maintainable in the future while increasing the speed of calculations
 \item Worked with researchers directly to develop tests for the programs and make sure the new methods weren't negatively affecting the accuracy of the results
 \item Documented the resulting code thoroughly to ensure the future health of the program
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{University of Maryland}{May 2017 - Present}{Undergraduate Researcher}{College Park, MD}
+\item Received the competitive Maryland Summer Scholars grant which is given to less than 30 undergraduates each summer
+\item Researched and implemented new data oriented vulnerability detection processes for use in the context of software development using Sci-Kit Learn
+\item Wrote a full technical report describing experimental design and results along with a poster presenting those findings
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{FedCentric Technologies}{Jan 2017 - Aug 2017}{Data Science Intern}{College Park, MD}
+\item Rapidly learned data science and machine learning techniques over the course of a semester
+\item Replicated and extended past research on machine learning vulnerability detection on old data-sets using a variety of Python machine learning libraries and R data management tools
+%\item Analyzed additional data using annotation schemes by applying improved machine learning methods that yielded more consistent results than our previous attempt at analysis
+\item Improved predictive capabilities suggesting possible industry applications that would reduce the cost of vulnerability detection by finding problems before release
 \end{rSubsection}
 
 %------------------------------------------------

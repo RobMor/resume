@@ -20,7 +20,7 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+\LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
 % Set the font to Tex Gyre Pagella
 \usepackage{tgpagella}
@@ -30,6 +30,8 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 
 \pagestyle{empty} % Suppress page numbers
+
+\usepackage[none]{hyphenat}
 
 \usepackage{hyperref} % Hyperlinks
 \hypersetup{
@@ -122,24 +124,22 @@
     {\bf #1} \hfill {#2} % Bold company name and date on the right
     \ifthenelse{\equal{#3}{}}{}{\\ {\em #3} \hfill {\em #4}} % Italic job title and location
     \smallskip
+    \begin{flushleft}
     \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
         \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
 }{
     \end{list}
+    \end{flushleft}
 }
 
 %----------------------------------------------------------------------------------------
 %	COLUMN LIST SUBSECTION FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rColumnSubsection}[6]{ % 6 input arguments - school, grad date, major, GPA, list title, num cols
+\newenvironment{rFreeSubsection}[6]{ % 6 input arguments - school, grad date, major, GPA, list title, num cols
     {\bf #1} \hfill {#2} % Bold school name and graduation date on the right
     \ifthenelse{\equal{#3}{}}{\\}{\\ {\em #3} \hfill {\em #4}} % Italic major and GPA on the right
-    \setlength{\multicolsep}{0em} % Set the space after the list title
-    \begin{multicols}{#6}[#5] % Number of columns and header
-        \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
-            \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+    \begin{flushleft}
 }{
-        \end{list}
-    \end{multicols}
+    \end{flushleft}
 }
