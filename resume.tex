@@ -58,20 +58,19 @@
 Recognition: {Brian G. Lyons Computer Science Endowed Scholarship (2019)}, {RSA Conference Security Scholars (2019)}, {Maryland Summer Scholars Grant (2018)}
 \end{hanging}
 
-\setlength{\multicolsep}{0em} % Set the space after the list title
-\begin{multicols}{4}[Relevant Coursework:] % Number of columns and header
-    \begin{list}{-}{\leftmargin=1em} % Options for bullet symbol and subsection indentation
-    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-	\item Machine Learning
-	\item Probability Theory
-	\item Software Engineering
-	\item Data Science
-	\item Algorithm Design
-	\item Comp. Methods
-	\item Database Design
-	\item Artificial Intelligence
-    \end{list}
-\end{multicols}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages & Python, C++, C, Java, SQL, Haskell, Rust, JavaScript, Go, OCaml \\
+Tools & Docker, Git, Linux, CI/CD, Numpy, Pandas, Sci-Kit Learn \\
+Other & AutoCAD, \LaTeX, MatLab, Unit Testing, Agile Methodologies
+\end{tabular}
 
 \end{rSection}
 
@@ -79,7 +78,7 @@ Recognition: {Brian G. Lyons Computer Science Endowed Scholarship (2019)}, {RSA 
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Experience}
+\begin{rSection}{Professional Experience}
 
 %------------------------------------------------
 
@@ -88,13 +87,11 @@ Recognition: {Brian G. Lyons Computer Science Endowed Scholarship (2019)}, {RSA 
 \item Overhauled the documentation and fielded maintenance and feature requests for the tool
 \item Built an internal package management system to boost daily productivity for data scientists, engineers and developers
 \item Integrated the package management system directly with continuous integration and deployment software
-\item Constructed a proof of concept Kafka cluster visualization tool as a side project using Docker and Node JS
 \end{rSubsection}
 
 %------------------------------------------------
 
 \begin{rSubsection}{National Institute of Standards and Technology}{Jun 2018 - Aug 2018}{Software Engineer}{Gaithersburg, MD}
-\item Developed a web scraping tool to harvest solar panel output and power grid usage from utility websites
 \item Overhauled a legacy flame speed analysis program written in C++ to update it to modern code standards and make it more maintainable in the future while increasing the speed of calculations
 \item Worked with researchers directly to develop tests for the programs and make sure the new methods were not negatively affecting the accuracy of the results
 \item Documented the resulting code thoroughly to ensure the maintainability of the program
@@ -113,33 +110,25 @@ Recognition: {Brian G. Lyons Computer Science Endowed Scholarship (2019)}, {RSA 
 \begin{rSubsection}{FedCentric Technologies}{Jan 2017 - Aug 2017}{Data Science Intern}{College Park, MD}
 \item Rapidly learned data science and machine learning techniques over the course of a semester
 \item Replicated and extended past research on machine learning vulnerability detection on old data-sets using a variety of Python machine learning libraries and R data management tools
-\item Analyzed additional data using annotation schemes by applying improved machine learning methods that yielded more consistent results than our previous attempt at analysis
-\item Improved predictive capabilities suggesting possible industry applications that would reduce the cost of vulnerability detection by finding problems before release
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Notable Projects}{}{}{}
-\item NetZero -- An extensible Python command line tool used to collect, manage, and analyze several data sources; meant to be used when analyzing the efficiency of a house
-\item Kakuro Solver -- A Haskell Kakuro solver built from scratch which can solve a large Kakuro board in under a second
-\item Trigger Happy -- A computer vision enabled smart nerf gun, written with JavaScript and Arduino, that prevents what would be lethal shots; won first place at Hack Penn State
+\item Improved predictive capabilities with improved methods suggesting possible industry applications that would reduce the cost of vulnerability detection by finding problems before release
 \end{rSubsection}
 
 %------------------------------------------------
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS SECTION
-%----------------------------------------------------------------------------------------
+\begin{rSection}{Project Experience}
 
-\begin{rSection}{Technical Skills}
+\begin{rSubsection}{NetZero}{Apr 2019 - Present}{A tool to glean insights on the efficiency of a house}{}
+\item Built, tested, documented and deployed a fully fledged Python command line tool
+\item Utilized multiple web API's and SQLite to collect and warehouse data in a fault tolerant manner
+\item Implemented an extension system so new data sources are trivial to add
+\end{rSubsection}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming Languages & Python, C++, C, Java, JavaScript, Haskell, Rust, Go, OCaml, SQL \\
-Tools & Numpy, Pandas, Sci-Kit Learn, Docker, Git, Linux, CI/CD \\
-Other & AutoCAD, \LaTeX, MatLab, Unit Testing, Agile Methodologies
-\end{tabular}
+\begin{rSubsection}{Trigger Happy}{Oct 2018}{A smart nerf gun}{}
+\item Prevents lethal shots from being made using arduino boards connecting a nerf gun mounted webcam to TensorFlow's computer vision abilities
+\item Won HackPSU Overall - Grand Prize and Booz Allen Hamilton - Best Machine Learning Hack
+\end{rSubsection}
 
 \end{rSection}
 
